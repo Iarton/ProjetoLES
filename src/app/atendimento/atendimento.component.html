@@ -1,0 +1,49 @@
+<h1>Pedido</h1>
+
+<ul>
+    <table style="width:100%">
+        <tr>
+            <th>
+                Codigo
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Preço Un
+            </th>
+        </tr>
+    </table>
+    <li *ngFor="let car of carrinho">
+        <table style="width:100%">
+            <tr>
+                <th>
+                    <span class="codigo">{{ car.codigo}}</span>
+                </th>
+                <th>
+                    <span class="Descrição">{{car.descricao}}</span>
+                </th>
+                <th>
+                    <span class="Preço">{{car.valorVenda}}</span>
+                </th>
+            </tr>
+        </table>
+    </li>
+    <p>
+        <input type="submit" classs="btn" value="Adicionar Item" (click)="addItem()">
+    </p>
+    <p>Codigo do Item:
+        <input type="text" class="txt" name="id" [(ngModel)]="id">
+    </p>
+    <p>Quantidade:
+        <input type="text" class="txt" name="qtd" [(ngModel)]="qtdp">
+    </p>
+    <p>{{error}}</p>
+    <h3>Total a Pagar: R${{total}}</h3>
+    <p>
+        <a routerLink="/final">
+            <input type="submit" classs="btn" value="Finalizar Compra" (click)="FinalizarCompra()">
+        </a>
+    </p>
+
+</ul>

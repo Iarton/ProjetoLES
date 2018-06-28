@@ -1,0 +1,23 @@
+<h1>Adicionar Produto</h1>
+
+<ul>
+    <p>Codigo:
+        <input type="number" class="txt" name="cd" [(ngModel)]="cd">
+      </p>
+  <p>Descrição do Produto:
+    <input type="text" class="txt" name="desc" [(ngModel)]="desc">
+  </p>
+  <p>Custo de Compra:
+    <input type="number" class="txt" name="cc" [(ngModel)]="cc">
+  </p>
+  <p>Custo de Venda:
+    <input type="number" class="txt" name="cv" [(ngModel)]="cv">
+  </p>
+  <p>Quantidade em Estoque:
+    <input type="number" class="txt" name="qtd" [(ngModel)]="qtdp">
+  </p>
+  <p>Estoque Minimo:
+    <input type="number" class="txt" name="em" [(ngModel)]="em">
+  </p>
+    <input type="submit" classs="btn" value="Salvar" (click)="SalvarProduto()"> <a routerLink="/estoque"><input type="submit" class="btn" value="Voltar"></a>
+</ul>

@@ -1,0 +1,50 @@
+<h1>Produtos</h1>
+<ul>
+  <table style="width:100%">
+    <tr>
+      <th>
+        Codigo
+      </th>
+      <th>
+        Descrição
+      </th>
+      <th>
+        Preço
+      </th>
+      <th>
+        Qtd Estoque
+      </th>
+    </tr>
+  </table>
+  <li *ngFor="let prod of ListProd">
+    <table style="width:100%">
+      <tr>
+        <th>
+          {{ prod.codigo}}
+        </th>
+        <th>
+          {{prod.descricao}}
+        </th>
+        <th>
+          {{prod.valorVenda}}
+        </th>
+        <th>
+          {{prod.qtdeEstoque}}
+        </th>
+      </tr>
+    </table>
+  </li>
+  <p>
+    <a routerLink="/criprod">
+      <input type="submit" class="btn" value="Adicionar Produto">
+    </a>
+  </p>
+  <p>
+    Codigo do Item:
+      <input type="text" class="txt" name="id" [(ngModel)]="id">
+    Quantidade:
+      <input type="number" class="txt" name="qtd" [(ngModel)]="qtdp">
+      {{erro}}
+    <input type="submit" classs="btn" value="Aumentar Estoque de Produto" (click)="addEstoque()">
+  </p>
+</ul>

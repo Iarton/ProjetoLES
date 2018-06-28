@@ -1,0 +1,22 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="" [class.activated]="currentUrl == '/'">
+        <i class="material-icons">menu</i>
+      </a>
+    </li>
+    <li>
+      <li>
+        <a routerLink="atendimento" [class.activated]="currentUrl == '/atendimento'">
+          <i class="material-icons">add_shopping_cart</i>
+        </a>
+      </li>
+      <li>
+        <li>
+          <li>
+            <a routerLink="estoque" [class.activated]="currentUrl == '/estoque'">
+              <i class="material-icons">shopping_basket</i>
+            </a>
+          </li>
+  </ul>
+</nav>
